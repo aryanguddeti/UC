@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/appointment-home.css">
+    <link rel="stylesheet" href="../static/appointment.css">
+    <title>My Appointments</title>
+</head>
+<body>
+  <div class="wrapper">
+    <span class="square">
+      <a class="tenth before after" href="{{ url_for('blog') }}">Home</a>
+    </span>
+  </div>
+
+  {% for appointment in booking %}
+  <div class="container">
+    {% if appointment.service == 'Painting' %}
+    <img
+     src="https://images.unsplash.com/photo-1614194076674-0598e6dd5703?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1071&q=80"
+     alt="Pancake"
+    />
+    {% endif %}
+
+    {% if appointment.service == 'Salon' %}
+    <img
+     src="https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1611&q=80"
+     alt="Pancake"
+    />
+    {% endif %}
+
+    {% if appointment.service == 'Electrician' %}
+    <img
+     src="https://images.unsplash.com/photo-1603172159066-6ade2af706c4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80"
+     alt="Pancake"
+    />
+    {% endif %}
+
+    {% if appointment.service == 'Plumber/Carpenter' %}
+    <img
+     src="https://images.unsplash.com/photo-1517646287270-a5a9ca602e5c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cGx1bWJlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+     alt="Pancake"
+    />
+    {% endif %}
+
+    <div class="container__text">
+     <h1>{{ appointment.service }}</h1>
+     <div class="container__text__star">
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+     </div>
+     {% if appointment.service=='Painting' %}
+     <p>
+      Qualified and experienced painters: We take only the most qualified painting contractors on board to ensure 
+      high-quality service, such that you satisfaction levels are always 100%.
+     </p>
+     {% endif %}
+
+     {% if appointment.service=='Salon' %}
+     <p>
+      Qualified and experienced barbers and stylists: We take only the most qualified stylists on board to ensure 
+      high-quality service, such that you can have your beautiful look on always.
+     </p>
+     {% endif %}
+
+     {% if appointment.service=='Electrician' %}
+     <p>
+      Experts: The professionals that we have on board with us are taken through a number of security
+      and parameter checks. They are certified in their trade and are even trained and counselled further
+     </p>
+     {% endif %}
+
+     {% if appointment.service=='Plumber/Carpenter' %}
+     <p>
+      Verified Experts: The safety and satisfaction of our customers remain to be the top of our priority
+      list. This is the reason that each of them is taken through an internal screening and security check to 
+      find their expertise in the field.
+     </p>
+     {% endif %}
+     <div class="container__text__timing">
+      <div class="container__text__timing_time">
+       <h2>Time</h2>
+       <p>{{ appointment.time }}</p>
+      </div>
+      <div class="container__text__timing_time">
+       <h2>Date</h2>
+       <p>{{ appointment.date }}</p>
+      </div>
+      <div class="container__text__timing_time">
+        {% if appointment.rooms_persons and appointment.service=='Painting' %}
+       <h2>Rooms</h2>
+       <p>{{ appointment.rooms_persons }}</p>
+        {% endif %}
+
+       {% if appointment.rooms_persons and appointment.service=='Salon' %}
+       <h2>Persons</h2>
+       <p>{{ appointment.rooms_persons }}</p>
+       {% endif %}
+
+       {% if appointment.rooms_persons and appointment.service=='Plumber/Carpenter' %}
+       <h2>Rooms</h2>
+       <p>{{ appointment.rooms_persons }}</p>
+       {% endif %}
+      </div>
+     </div>
+    </div>
+   </div>
+   <br>
+   {% endfor %}
+  </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Saloon and haircut Booking</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='electrician.css') }}">
+	<!-- Font -->
+	<link href="https://fonts.googleapis.com/css?family=Raleway:400,600,700,900" rel="stylesheet">
+</head>
+<body>
+
+
+	<div class="container">
+		<div class="container-time">
+				<h2 class="heading">Available ON</h2>
+				<h3 class="heading-days">Monday-Friday</h3>
+				<p>7am - 10pm </p>
+
+				<h3 class="heading-days">Saturday and sunday</h3>
+				<p>9am - 10pm </p>
+
+				<hr>
+
+				<h4 class="heading-phone">Call Us: (123) 45-45-456</h4>
+		</div>
+
+		<div class="container-form">
+				<form action="" method="POST">
+					<h2 class="heading heading-yellow">Electricians at your <br> doorstep</h2>
+
+					<div class="form-field">
+						<p>Date</p>
+						<input type="date" name="date">
+					</div>
+					<div class="form-field">
+						<p>Time</p>
+						<input type="time" name="time">
+					</div>
+					<input class="btn" type="submit" value="Submit">
+				</form>
+		</div>
+	</div>
+	
+	
+</body>
+</html>

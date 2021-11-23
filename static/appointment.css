@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #36443e;
+  font-family: Arial, Helvetica, sans-serif;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  background-color: #fff;
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 300px 600px;
+      grid-template-columns: 300px 600px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.356);
+          box-shadow: 0 15px 20px rgba(0, 0, 0, 0.356);
+}
+
+.container img {
+  width: 300px;
+  height: 300px;
+  border-radius: 5px 0 0 5px;
+}
+
+.container .btn {
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  border: none;
+  outline: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #fc9400;
+  color: #fff;
+  padding: 22px 45px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  border-radius: 5px;
+  cursor: pointer;
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.294);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.294);
+}
+
+.container .btn i {
+  margin-left: 20px;
+  font-size: 1.5rem;
+}
+
+.container__text {
+  padding: 40px 40px 0;
+}
+
+.container__text h1 {
+  color: #401fac;
+  font-weight: 400;
+}
+
+.container__text .container__text__star span {
+  font-size: 0.8rem;
+  color: #ffa800;
+  margin: -5px 0 20px;
+}
+
+.container__text p {
+  font-size: 0.9rem;
+}
+
+.container__text .container__text__timing {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 20px 0 10px;
+}
+
+.container__text .container__text__timing .container__text__timing_time {
+  margin-right: 40px;
+}
+
+.container__text .container__text__timing h2 {
+  margin-bottom: 5px;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #818189;
+}
+
+.container__text .container__text__timing p {
+  color: #401fac;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+/*# sourceMappingURL=appointment.css.map */
