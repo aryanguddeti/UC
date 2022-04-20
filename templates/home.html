@@ -10,9 +10,21 @@
     <title>Home</title>
 </head>
 <body>
-    <div class="head"><a class="logout" href="{{ url_for('logout') }}">Logout</a></div>
-    <a class="logout" href="{{ url_for('bookings') }}">My Appointments</a>
-    <div class="container">
+    <ul class="navigation">
+        <a href="#about"><li>About</li></a>
+        <a href="{{ url_for('bookings') }}"><li>Bookings</li></a>
+        <a href="#services"><li>Services</li></a>
+        <a href="{{ url_for('logout') }}"><li>Logout</li></a>
+      </ul>
+      <br><br><br><br><br><br>
+    <div class="intro" id="about">
+        <div class="eleven">
+            <h1>Home Saverz</h1>
+        </div>
+        <p>Home Saverz is an Indian company that markets home construction, renovation, interior design, painting, maintenance, at-home beauty & salon services known as Zalon, packers & movers, home delivery of essential items known as Housejoymart, fumigation & sanitization service for homes and offices to mobile health checkup camps for general health & COVID testing known as Housejoycare. With in-house teams for all the above mentioned services, currently they serve across 6 cities in India where they have offices as well, which includes Bengaluru(Head office), Chennai, Delhi-NCR, Hyderabad, Mumbai and Pune. They are also planning to expand the above mentioned services and the offices across 24 more cities in India. Their fumigation & sanitization service is currently present across 30 cities in India.</p>
+    </div>
+
+    <div class="container" id="services">
         <div class="services">
             <h1>Our Services</h1>
         </div>
